@@ -1,0 +1,15 @@
+<%= form_for @user, html: {class: "form-signin"} do |f| %>
+  <h1 class="h3 mb-3 font-weight-normal"><%= t "signup" %></h1>
+  <%= f.label :name, "Your Name", class: "sr-only" %>
+  <%= f.text_field :name, class: "form-control", placeholder: "Enter Your Name", required: true  %>
+  <%= f.label :email, "Your Email", class: "sr-only" %>
+  <%= f.email_field :email, class: "form-control", placeholder: "Enter email", required: true  %>
+  <%= f.label :password, "Password", class: "sr-only" %>
+  <%= f.password_field :password, class: "form-control", placeholder: "Enter password", required: true  %>
+  <%= f.label :password_confirmation, "Password Confirmation", class: "sr-only" %>
+  <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirmation password", required: true  %>
+  <%= f.submit (t "register"), class: "btn btn-lg btn-primary btn-block" %>
+  <div class="text-right">
+    <%= link_to (t "signin"), "#" %>
+  </div>
+<% end %>

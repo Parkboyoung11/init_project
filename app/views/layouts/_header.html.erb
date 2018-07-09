@@ -1,0 +1,10 @@
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <%= link_to "Sample App", home_path, id: "logo", class: "navbar-brand" %>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <%= link_to (t "home"), home_path, class: "nav-item nav-link active" %>
+        <%= link_to (t "help"), help_path, class: "nav-item nav-link" %>
+        <%= link_to (t "signup"), signup_path, class: "nav-item nav-link" %>
+      </div>
+    </div>
+</header>
