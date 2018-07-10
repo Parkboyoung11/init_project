@@ -1,13 +1,18 @@
-<%= form_for @user, html: {class: "form-signin"} do |f| %>
+<%= form_for @user, url: signup_path, html: {class: "form-signin"} do |f| %>
+  <%= render "shared/error_messages" %>
   <h1 class="h3 mb-3 font-weight-normal"><%= t "signup" %></h1>
-  <%= f.label :name, "Your Name", class: "sr-only" %>
-  <%= f.text_field :name, class: "form-control", placeholder: "Enter Your Name", required: true  %>
-  <%= f.label :email, "Your Email", class: "sr-only" %>
-  <%= f.email_field :email, class: "form-control", placeholder: "Enter email", required: true  %>
-  <%= f.label :password, "Password", class: "sr-only" %>
-  <%= f.password_field :password, class: "form-control", placeholder: "Enter password", required: true  %>
-  <%= f.label :password_confirmation, "Password Confirmation", class: "sr-only" %>
-  <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirmation password", required: true  %>
+  <%= f.label :name, (t "your_name"), class: "sr-only" %>
+  <%= f.text_field :name, class: "form-control",
+                    placeholder: (t "your_name_p"), required: true  %>
+  <%= f.label :email, (t "your_email"), class: "sr-only" %>
+  <%= f.email_field :email, class: "form-control",
+                    placeholder: (t "your_email_p"), required: true  %>
+  <%= f.label :password, (t "your_pass"), class: "sr-only" %>
+  <%= f.password_field :password, class: "form-control",
+                        placeholder: (t "pass_p"), required: true  %>
+  <%= f.label :password_confirmation, (t "passw_conf"), class: "sr-only" %>
+  <%= f.password_field :password_confirmation, class: "form-control",
+                        placeholder: (t "pass_conf_p"), required: true  %>
   <%= f.submit (t "register"), class: "btn btn-lg btn-primary btn-block" %>
   <div class="text-right">
     <%= link_to (t "signin"), "#" %>
