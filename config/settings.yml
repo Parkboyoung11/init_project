@@ -1,3 +1,6 @@
 name_maximum: 50
 email_maximun: 255
 pass_minimun: 6
+img_size: 80
+gra_size: 50
+user_per_page: 8

@@ -18,3 +18,5 @@ en:
   setting: "Setting"
   logout: "Log out"
   login_error: "Invalid email/password combination"
+  delete: "Delete"
+  sure_s: "You sure ?"

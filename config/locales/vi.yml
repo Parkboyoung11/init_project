@@ -18,3 +18,5 @@ vi:
   setting: "Cai dat"
   logout: "Dang xuat"
   login_error: "Email hoac password khong dung"
+  delete: "Xoa"
+  sure_s: "You sure ?"

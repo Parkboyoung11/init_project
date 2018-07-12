@@ -5,9 +5,10 @@
         <%= link_to (t "home"), home_path, class: "nav-item nav-link active" %>
         <%= link_to (t "help"), help_path, class: "nav-item nav-link" %>
         <% if logged_in? %>
-          <%= link_to "#{current_user.name}", "#", class: "nav-item nav-link" %>
+          <%= link_to "#{current_user.name}", users_path, class: "nav-item nav-link" %>
           <%= link_to (t "profile"), current_user, class: "nav-item nav-link" %>
-          <%= link_to (t "setting"), "#", class: "nav-item nav-link" %>
+          <%= link_to (t "setting"), edit_user_path(current_user),
+                      class: "nav-item nav-link" %>
           <%= link_to (t "logout"), logout_path, method: :delete,
                       class: "nav-item nav-link" %>
         <% else %>
