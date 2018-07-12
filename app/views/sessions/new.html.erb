@@ -1,0 +1,18 @@
+<%= form_for :session, url: login_path, html: {class: "form-signin"} do |f| %>
+  <h1 class="h3 mb-3 font-weight-normal"><%= t "welcome" %></h1>
+  <%= f.label :email, (t "your_email"), class: "sr-only" %>
+  <%= f.email_field :email, class: "form-control",
+                    placeholder: (t "your_email_p"), required: true  %>
+  <%= f.label :password, (t "your_pass"), class: "sr-only" %>
+  <%= f.password_field :password, class: "form-control",
+                        placeholder: (t "pass_p"), required: true  %>
+  <div class="checkbox mb-3">
+    <%= f.label :remember_me do %>
+      <%= f.check_box :remember_me %><%= t "remember_me" %>
+    <% end %>
+  </div>
+  <%= f.submit (t "signin"), class: "btn btn-lg btn-primary btn-block" %>
+  <div class="text-right">
+    <p><%= link_to (t "signupnow"), signup_path %></p>
+  </div>
+<% end %>

@@ -4,7 +4,15 @@
       <div class="navbar-nav">
         <%= link_to (t "home"), home_path, class: "nav-item nav-link active" %>
         <%= link_to (t "help"), help_path, class: "nav-item nav-link" %>
-        <%= link_to (t "signup"), signup_path, class: "nav-item nav-link" %>
+        <% if logged_in? %>
+          <%= link_to "#{current_user.name}", "#", class: "nav-item nav-link" %>
+          <%= link_to (t "profile"), current_user, class: "nav-item nav-link" %>
+          <%= link_to (t "setting"), "#", class: "nav-item nav-link" %>
+          <%= link_to (t "logout"), logout_path, method: :delete,
+                      class: "nav-item nav-link" %>
+        <% else %>
+          <%= link_to (t "signin"), login_path, class: "nav-item nav-link" %>
+        <% end %>
       </div>
     </div>
 </header>
