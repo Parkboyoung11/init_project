@@ -1,0 +1,9 @@
+<h1><%= t "all_users" %></h1>
+
+<%= paginate @users %>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= paginate @users %>

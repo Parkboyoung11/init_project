@@ -29,6 +29,10 @@ class User < ApplicationRecord
     update_attributes remember_digest: nil
   end
 
+  def current_user? current_user
+    self == current_user
+  end
+
   class << self
     def digest string
       cost = User.choose_cost
