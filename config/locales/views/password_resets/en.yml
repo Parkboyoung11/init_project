@@ -1,0 +1,14 @@
+en:
+  v_pr_new:
+    forgot_password: "Forgot Password"
+    your_email: "Your email"
+    your_email_p: "Enter email"
+    reset_pass: "Reset Password"
+
+  v_pr_edit:
+    reset_pass: "Change your password"
+    your_pass: "Your Password"
+    pass_p: "Enter Password"
+    passw_conf: "Password Confirmation"
+    pass_conf_p: "Confirm Password"
+    update_password: "Update Password"

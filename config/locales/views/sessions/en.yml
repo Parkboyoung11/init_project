@@ -1,5 +1,5 @@
 en:
-  v_sh_n:
+  v_ss_n:
     welcome: "Welcome"
     your_email: "Your Email"
     your_email_p: "Enter Email"
@@ -8,3 +8,4 @@ en:
     remember_me: "Remember me"
     signin: "Sign in"
     signupnow: "Sign up now"
+    forgot_password: "Forgot Password"
