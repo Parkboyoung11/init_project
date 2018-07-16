@@ -14,3 +14,11 @@ vi:
     not_delete: "Da co loi. Khong the xoa tai khoan"
     p_login: "Hay dang nhap truoc"
     find_error: "Khong tim thay tai khoan"
+
+  c_prc:
+    email_reset: "Hay xem trong email"
+    email_not_found: "Khong tim thay email"
+    can_not_empty: "Khong de trong"
+    pass_has_been_reset: "Da reset mat khau"
+    find_error: "Khong tim thay email"
+    pass_expired: "Duong dan da het han"

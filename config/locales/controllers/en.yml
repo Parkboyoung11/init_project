@@ -14,3 +14,11 @@ en:
     not_delete: "Error. Can't Delete user!"
     p_login: "Please log in first"
     find_error: "User not found"
+
+  c_prc:
+    email_reset: "Email sent with password reset instructions"
+    email_not_found: "Email address not found"
+    can_not_empty: "Can not Empty"
+    pass_has_been_reset: "Password has been Reset"
+    find_error: "Email not found"
+    pass_expired: "Link has been expried"

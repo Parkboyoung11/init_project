@@ -6,3 +6,4 @@ gra_size: 50
 user_per_page: 8
 time_zone: "Asia/Ho_Chi_Minh"
 u_host: "localhost:3000"
+hour_expired: 2

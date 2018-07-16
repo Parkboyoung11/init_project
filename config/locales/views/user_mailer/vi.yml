@@ -2,6 +2,12 @@ vi:
   v_mail:
     header_mail: "9fury Blog"
     say_hi: "Xin chao "
-    start_mail: "Chao mung toi blog cua toi. Nhap vao "
     link: "lien ket "
+
+  v_mail_active:
+    start_mail: "Chao mung toi blog cua toi. Nhap vao "
     end_mail: "nay de kich hoat tai khoan cua ban"
+
+  v_mail_reset:
+    start_mail: "De reset mat khau, nhap vao "
+    end_mail: ". Lien ket se het han trong 2 gio."

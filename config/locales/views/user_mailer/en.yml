@@ -2,6 +2,12 @@ en:
   v_mail:
     header_mail: "9fury Blog"
     say_hi: "Hi "
-    start_mail: "Welcome to my Blog. Please click "
     link: "link "
+
+  v_mail_active:
+    start_mail: "Welcome to my Blog. Please click "
     end_mail: "to active your account!"
+
+  v_mail_reset:
+    start_mail: "To reset your password click the "
+    end_mail: ".This link will expire in two hours."

@@ -1,0 +1,10 @@
+<%= form_for :password_reset, url: password_resets_path,
+             html: {class: "form-signin"} do |f| %>
+  <h1 class="h3 mb-3 font-weight-normal"><%= t "v_pr_new.forgot_password" %></h1>
+  <%= f.label :email, (t "v_pr_new.your_email"), class: "sr-only" %>
+  <%= f.email_field :email, class: "form-control",
+                    placeholder: (t "v_pr_new.your_email_p"), required: true  %>
+  <br>
+  <%= f.submit (t "v_pr_new.reset_pass"),
+               class: "btn btn-lg btn-primary btn-block" %>
+<% end %>

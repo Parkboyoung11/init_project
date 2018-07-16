@@ -1,5 +1,5 @@
 vi:
-  v_sh_n:
+  v_ss_n:
     welcome: "Chao mung"
     your_email: "Email cua ban"
     your_email_p: "Nhap Email"
@@ -8,3 +8,4 @@ vi:
     remember_me: "Ghi nho dang nhap"
     signin: "Dang nhap"
     signupnow: "Dang ki ngay"
+    forgot_password: "Quen mat khau"

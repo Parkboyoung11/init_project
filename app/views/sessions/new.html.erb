@@ -1,18 +1,20 @@
 <%= form_for :session, url: login_path, html: {class: "form-signin"} do |f| %>
-  <h1 class="h3 mb-3 font-weight-normal"><%= t "v_sh_n.welcome" %></h1>
-  <%= f.label :email, (t "v_sh_n.your_email"), class: "sr-only" %>
+  <h1 class="h3 mb-3 font-weight-normal"><%= t "v_ss_n.welcome" %></h1>
+  <%= f.label :email, (t "v_ss_n.your_email"), class: "sr-only" %>
   <%= f.email_field :email, class: "form-control",
-                    placeholder: (t "v_sh_n.your_email_p"), required: true  %>
-  <%= f.label :password, (t "v_sh_n.your_pass"), class: "sr-only" %>
+                    placeholder: (t "v_ss_n.your_email_p"), required: true  %>
+  <%= f.label :password, (t "v_ss_n.your_pass"), class: "sr-only" %>
   <%= f.password_field :password, class: "form-control",
-                        placeholder: (t "v_sh_n.pass_p"), required: true  %>
+                        placeholder: (t "v_ss_n.pass_p"), required: true  %>
   <div class="checkbox mb-3">
     <%= f.label :remember_me do %>
-      <%= f.check_box :remember_me %><%= t "v_sh_n.remember_me" %>
+      <%= f.check_box :remember_me %><%= t "v_ss_n.remember_me" %>
     <% end %>
+    <%= link_to (t "v_ss_n.forgot_password"), new_password_reset_path,
+                class: "float-right" %>
   </div>
-  <%= f.submit (t "v_sh_n.signin"), class: "btn btn-lg btn-primary btn-block" %>
+  <%= f.submit (t "v_ss_n.signin"), class: "btn btn-lg btn-primary btn-block" %>
   <div class="text-right">
-    <p><%= link_to (t "v_sh_n.signupnow"), signup_path %></p>
+    <p><%= link_to (t "v_ss_n.signupnow"), signup_path %></p>
   </div>
 <% end %>

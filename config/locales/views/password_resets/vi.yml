@@ -1,0 +1,14 @@
+en:
+  v_pr_new:
+    forgot_password: "Quen mat khau"
+    your_email: "email cua ban"
+    your_email_p: "Nhap email"
+    reset_pass: "Reset Password"
+
+  v_pr_edit:
+    reset_pass: "Thay doi mat khau"
+    your_pass: "Mat khau cua ban"
+    pass_p: "Nhap mat khau"
+    passw_conf: "Xac nhan mat khau"
+    pass_conf_p: "Xac nhan mat khau"
+    update_password: "Cap nhat mat khau"
