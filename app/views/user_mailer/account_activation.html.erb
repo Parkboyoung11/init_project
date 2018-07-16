@@ -1,0 +1,6 @@
+<h1><%= t "v_mail.header_mail" %></h1>
+<p><%= (t "v_mail.say_hi") + @user.name %></p>
+<%= t "v_mail.start_mail" %>
+<%= link_to (t "v_mail.link"), edit_account_activation_url(id: @user.activation_token,
+                                                    email: @user.email) %>
+<%= t "v_mail.end_mail" %>

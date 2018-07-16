@@ -1,0 +1,16 @@
+en:
+  c_aac:
+    acc_activated: "Account Activated Success. Welcome to my Blog"
+    invalid_link: "Your activation expried! Try again!"
+
+  c_sc:
+    not_activated: "Account not Activated. See activation in your mail."
+    login_error: "Login Error. Try again"
+
+  c_uc:
+    p_check_mail: "Check activate link in your mail"
+    update_success: "Update Successfully"
+    u_delete: "User is deleted"
+    not_delete: "Error. Can't Delete user!"
+    p_login: "Please log in first"
+    find_error: "User not found"

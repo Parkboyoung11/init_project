@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
 
   def index
-    @users = User.select(:id, :name, :admin, :email).order(name: :asc)
+    @users = User.get_users_to_show
                  .page(params[:page]).per Settings.user_per_page
   end
 
@@ -17,8 +17,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t "Welcome"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "c_uc.p_check_mail"
+      redirect_to root_url
     else
       render :new
     end
@@ -30,7 +31,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = t "update_success"
+      flash[:success] = t "c_uc.update_success"
       redirect_to @user
     else
       render :edit
@@ -39,9 +40,9 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.destroy
-      flash[:success] = t "u_delete"
+      flash[:success] = t "c_uc.u_delete"
     else
-      flash[:danger] = t "not_delete"
+      flash[:danger] = t "c_uc.not_delete"
     end
     redirect_to users_url
   end
@@ -51,7 +52,7 @@ class UsersController < ApplicationController
   def logged_in_user
     return if logged_in?
     store_location
-    flash[:danger] = t "p_login"
+    flash[:danger] = t "c_uc.p_login"
     redirect_to login_url
   end
 
@@ -71,7 +72,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
 
     return @user if @user
-    flash[:danger] = t "error"
+    flash[:danger] = t "c_uc.find_error"
     redirect_to root_path
   end
 end
