@@ -1,0 +1,12 @@
+vi:
+  v_st_a:
+    about: "About"
+
+  v_st_c:
+    contact: "Lien he"
+
+  v_st_h:
+    help: "Tro giup"
+
+  v_st_ho:
+    signupnow: "Dang ki ngay"

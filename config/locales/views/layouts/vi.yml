@@ -1,0 +1,14 @@
+vi:
+  v_l_f:
+    about: "About"
+    contact: "Lien he"
+    news: "Tin tuc"
+
+  v_l_h:
+    my_blog: "9fury Blog"
+    home: "Trang chu"
+    help: "Tro giup"
+    profile: "Thong tin ca nha"
+    setting: "Cai dat"
+    logout: "Dang xuat"
+    signin: "Dang nhap"

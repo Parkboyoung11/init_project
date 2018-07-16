@@ -1,0 +1,16 @@
+vi:
+  c_aac:
+    acc_activated: "Kich hoat tai khoan thanh cong"
+    invalid_link: "Duong dan kich hoat da het han. Moi ban thu lai"
+
+  c_sc:
+    not_activated: "Tai khoan chua duoc kich hoat. Xem laij trong email"
+    login_error: "Dang nhap that bai"
+
+  c_uc:
+    p_check_mail: "Kiem tra duong dan kich hoat trong email"
+    update_success: "Cap nhat thong tin thanh cong"
+    u_delete: "Tai khoan xoa thanh cong"
+    not_delete: "Da co loi. Khong the xoa tai khoan"
+    p_login: "Hay dang nhap truoc"
+    find_error: "Khong tim thay tai khoan"

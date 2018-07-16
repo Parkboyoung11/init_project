@@ -1,0 +1,14 @@
+en:
+  v_l_f:
+    about: "About"
+    contact: "Contact"
+    news: "News"
+
+  v_l_h:
+    my_blog: "9fury Blog"
+    home: "Home"
+    help: "Help"
+    profile: "Profile"
+    setting: "Setting"
+    logout: "Log out"
+    signin: "Sign in"

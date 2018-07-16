@@ -1,0 +1,25 @@
+en:
+  v_u_form:
+    your_name: "Your name"
+    your_email: "Your Email"
+    your_pass: "Your Password"
+    passw_conf: "Password Confirmation"
+    your_name_p: "Enter your name"
+    your_email_p: "Enter your email"
+    pass_p: "Enter password"
+    pass_conf_p: "Confirm password"
+
+  v_u_user:
+    delete: "Delete"
+    sure_s: "You sure?"
+
+  v_u_edit:
+    save_change: "Save Change"
+    update_profile: "Update Profile"
+
+  v_u_index:
+    all_users: "All Users"
+
+  v_u_new:
+    register: "Register"
+    signin: "Sign in"

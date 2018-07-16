@@ -1,18 +1,19 @@
 <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <%= link_to "Sample App", home_path, id: "logo", class: "navbar-brand" %>
+    <%= link_to (t "v_l_h.my_blog"), home_path, id: "logo", class: "navbar-brand" %>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <%= link_to (t "home"), home_path, class: "nav-item nav-link active" %>
-        <%= link_to (t "help"), help_path, class: "nav-item nav-link" %>
+        <%= link_to (t "v_l_h.home"), home_path, class: "nav-item nav-link active" %>
+        <%= link_to (t "v_l_h.help"), help_path, class: "nav-item nav-link" %>
         <% if logged_in? %>
-          <%= link_to "#{current_user.name}", users_path, class: "nav-item nav-link" %>
-          <%= link_to (t "profile"), current_user, class: "nav-item nav-link" %>
-          <%= link_to (t "setting"), edit_user_path(current_user),
+          <%= link_to "#{current_user.name}", users_path,
                       class: "nav-item nav-link" %>
-          <%= link_to (t "logout"), logout_path, method: :delete,
+          <%= link_to (t "v_l_h.profile"), current_user, class: "nav-item nav-link" %>
+          <%= link_to (t "v_l_h.setting"), edit_user_path(current_user),
+                      class: "nav-item nav-link" %>
+          <%= link_to (t "v_l_h.logout"), logout_path, method: :delete,
                       class: "nav-item nav-link" %>
         <% else %>
-          <%= link_to (t "signin"), login_path, class: "nav-item nav-link" %>
+          <%= link_to (t "v_l_h.signin"), login_path, class: "nav-item nav-link" %>
         <% end %>
       </div>
     </div>

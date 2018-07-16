@@ -1,0 +1,10 @@
+vi:
+  v_sh_n:
+    welcome: "Chao mung"
+    your_email: "Email cua ban"
+    your_email_p: "Nhap Email"
+    your_pass: "Password cua ban"
+    pass_p: "Nhap Password"
+    remember_me: "Ghi nho dang nhap"
+    signin: "Dang nhap"
+    signupnow: "Dang ki ngay"

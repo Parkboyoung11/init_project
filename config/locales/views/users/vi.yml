@@ -1,0 +1,25 @@
+vi:
+  v_u_form:
+    your_name: "Ten cua ban"
+    your_email: "Email cua ban"
+    your_pass: "Password cua ban"
+    passw_conf: "Xac nhan Password"
+    your_name_p: "Nhap ten cua ban"
+    your_email_p: "Nhap email cua ban"
+    pass_p: "Nhap may khau cua ban"
+    pass_conf_p: "Xac nhan mat khau"
+
+  v_u_user:
+    delete: "Xoa"
+    sure_s: "Ban chac chu?"
+
+  v_u_edit:
+    save_change: "Luu thay doi"
+    update_profile: "Cap nhat thong tin ca nhan"
+
+  v_u_index:
+    all_users: "Toan bo nguoi dung"
+
+  v_u_new:
+    register: "Dang ki"
+    signin: "Dang nhap"

@@ -1,0 +1,10 @@
+en:
+  v_sh_n:
+    welcome: "Welcome"
+    your_email: "Your Email"
+    your_email_p: "Enter Email"
+    your_pass: "Your Password"
+    pass_p: "Enter Password"
+    remember_me: "Remember me"
+    signin: "Sign in"
+    signupnow: "Sign up now"
