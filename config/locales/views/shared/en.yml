@@ -7,3 +7,7 @@ en:
   v_sh_ui:
     view_profile: "View the profile"
     micropost: "micropost"
+
+  v_sh_st:
+    following: "Following"
+    follower: "Follower"

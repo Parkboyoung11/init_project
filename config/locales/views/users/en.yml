@@ -23,3 +23,8 @@ en:
   v_u_new:
     register: "Register"
     signin: "Sign in"
+
+  v_u_fo:
+    follow: "Follow"
+    unfollow: "Unfollow"
+    view_profile: "View the profile"
