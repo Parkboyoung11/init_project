@@ -1,0 +1,19 @@
+<%= form_for @micropost do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: (t "v_sh_mif.p_post") %>
+  </div>
+  <%= f.submit (t "v_sh_mif.post"), class: "btn btn-primary" %>
+  <span class="picture">
+    <%= f.file_field :picture, accept: Settings.image_type %>
+  </span>
+<% end %>
+
+<script type="text/javascript">
+  $('#micropost_picture').bind("change", function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > Settings.picture_size_max) {
+      alert(t "v_sh_mif.p_smaller_image");
+    }
+  });
+</script>
