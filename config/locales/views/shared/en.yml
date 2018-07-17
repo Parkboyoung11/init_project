@@ -1,0 +1,9 @@
+en:
+  v_sh_mif:
+    post: "Post"
+    p_post: "Compose new micropost..."
+    p_smaller_image: "Please choose smaller image"
+
+  v_sh_ui:
+    view_profile: "View the profile"
+    micropost: "micropost"

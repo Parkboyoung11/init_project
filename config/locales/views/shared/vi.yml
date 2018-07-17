@@ -1,0 +1,9 @@
+vi:
+  v_sh_mif:
+    post: "Dang"
+    p_post: "Tao bai dang moi..."
+    p_smaller_image: "Hay chon anh nho hon"
+
+  v_sh_ui:
+    view_profile: "Xem trang ca nhan"
+    micropost: "bai dang"
