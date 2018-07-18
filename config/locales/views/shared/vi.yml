@@ -7,3 +7,8 @@ vi:
   v_sh_ui:
     view_profile: "Xem trang ca nhan"
     micropost: "bai dang"
+
+  v_sh_st:
+    following: "Dang theo doi"
+    follower: "Nguoi theo doi"
+
