@@ -7,5 +7,5 @@ vi:
     pass_p: "Nhap Password"
     remember_me: "Ghi nho dang nhap"
     signin: "Dang nhap"
-    signupnow: "Dang ki ngay"
+    signup: "Dang ki"
     forgot_password: "Quen mat khau"

@@ -1,6 +1,5 @@
 <%= form_for @user, html: {class: "form-signin"} do |f| %>
   <%= render "shared/error_messages", object: f.object %>
-  <h1 class="h3 mb-3 font-weight-normal"><%= t "v_u_form.signup" %></h1>
   <%= f.label :name, (t "v_u_form.your_name"), class: "sr-only" %>
   <%= f.text_field :name, class: "form-control",
                     placeholder: (t "v_u_form.your_name_p"), required: true  %>

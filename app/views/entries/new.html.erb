@@ -1,0 +1,16 @@
+<h1></h1>
+<h1 class="text-center">Create Your Post</h1>
+<%= form_for @entry, url: publish_path do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="input-group mb-3">
+    <%= f.text_field :title, class: "form-control",
+                     placeholder: "Title", required: true %>
+  </div>
+  <div class="input-group">
+    <%= f.text_area :content, class: "form-control",
+                    placeholder: "Content...", size: "20x20", required: true %>
+  </div>
+  <h3></h3>
+  <%= f.submit "Publish", class: "btn btn-primary float-right" %>
+  <div class="input-group mb-3"></div>
+<% end %>

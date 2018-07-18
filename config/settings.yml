@@ -3,12 +3,13 @@ email_maximun: 255
 pass_minimun: 6
 img_size: 80
 gra_size: 50
-user_per_page: 8
+user_per_page: 7
 microposts_per_page: 10
 time_zone: "Asia/Ho_Chi_Minh"
 u_host: "localhost:3000"
 hour_expired: 2
-content_max: 140
+title_max: 255
+content_max: 1000
 picture_size_max: 5
 hozi_max: 400
 vert_max: 400

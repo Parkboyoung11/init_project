@@ -7,5 +7,5 @@ en:
     pass_p: "Enter Password"
     remember_me: "Remember me"
     signin: "Sign in"
-    signupnow: "Sign up now"
+    signup: "Sign up"
     forgot_password: "Forgot Password"

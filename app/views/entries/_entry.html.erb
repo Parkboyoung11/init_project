@@ -1,0 +1,12 @@
+<li id="entry-<%= entry.id %>">
+  <%= link_to gravatar_for(entry.user,
+                           size: Settings.avatar_size), entry.user %>
+  <span class="user">
+    <%= link_to entry.user.name, entry.user %>
+    <div class="timestamp"><%= time_ago_in_words(entry.created_at) %> ago</div>
+  </span>
+  <span class="title"><%= entry.title %></span>
+  <span class="content">
+    <%= truncate(entry.content, length: 200, omission: '...') %>
+  </span>
+</li>

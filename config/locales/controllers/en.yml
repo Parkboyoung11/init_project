@@ -29,3 +29,5 @@ en:
     mpost_created: "Micropost Created!"
     mpost_deleted: "Micropost Deleted!"
     mpost_not_delete: "Can't Delete"
+    entry_created: "Publish Successfully"
+    entry_deleted: "Post Deleted!"

@@ -8,6 +8,7 @@ vi:
     your_email_p: "Nhap email cua ban"
     pass_p: "Nhap may khau cua ban"
     pass_conf_p: "Xac nhan mat khau"
+    signup: "Dang ki"
 
   v_u_user:
     delete: "Xoa"
