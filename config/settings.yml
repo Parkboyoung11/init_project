@@ -9,7 +9,7 @@ time_zone: "Asia/Ho_Chi_Minh"
 u_host: "localhost:3000"
 hour_expired: 2
 title_max: 255
-content_max: 1000
+content_max: 100000
 picture_size_max: 5
 hozi_max: 400
 vert_max: 400

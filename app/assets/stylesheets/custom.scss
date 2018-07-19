@@ -372,3 +372,49 @@ span.picture {
 .users.follow {
   padding: 0;
 }
+
+.furry-avatar {
+  margin-left: 15px;
+  float: right;
+  max-width: 40px;
+}
+
+.furry-drop {
+  padding: 0;
+}
+
+.author-avatar {
+  max-width: 100px;
+}
+
+.author-name {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.author-name a:hover {
+  text-decoration: none;
+}
+
+.author-info {
+  padding-right: 0;
+}
+
+.welcome-you {
+  font-weight: bolder;
+  font-size: 25px;
+  color: orangered;
+}
+
+.login-to-follow {
+  margin-top: 10px;
+  font-size: 20px
+}
+
+.login-to-follow a {
+  color: black;
+}
+
+.login-to-follow a:hover {
+  text-decoration: none;
+}

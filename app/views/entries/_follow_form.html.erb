@@ -1,0 +1,19 @@
+<% if logged_in? %>
+  <% unless @entry.user.current_user? current_user %>
+    <div id="follow_form">
+      <% if current_user.following? @entry.user %>
+        <%= render "unfollow" %>
+      <% else %>
+        <%= render "follow" %>
+      <% end %>
+    </div>
+  <% else %>
+    <div id="follow_form" class="welcome-you">
+      Welcome you!
+    </div>
+  <% end %>
+<% else %>
+  <div id="follow_form" class="login-to-follow">
+    <%= link_to "log in to follow!", login_path %>
+  </div>
+<% end %>
