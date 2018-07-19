@@ -5,7 +5,7 @@
     <%= link_to entry.user.name, entry.user %>
     <div class="timestamp"><%= time_ago_in_words(entry.created_at) %> ago</div>
   </span>
-  <span class="title"><%= entry.title %></span>
+  <span class="title"><%= link_to entry.title, entry %></span>
   <span class="content">
     <%= truncate(entry.content, length: 200, omission: '...') %>
   </span>

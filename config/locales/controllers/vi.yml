@@ -31,3 +31,4 @@ vi:
     mpost_not_delete: "Khong the xoa"
     entry_created: "Dang bai thanh cong"
     entry_deleted: "Xoa bai thanh cong"
+    cmt_deleted: "Da xoa comment"

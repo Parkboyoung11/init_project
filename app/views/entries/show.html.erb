@@ -1,0 +1,127 @@
+<div class="row">
+
+  <!-- Post Content Column -->
+  <div class="col-lg-8">
+
+    <!-- Title -->
+    <h1 class="mt-4" style="text-align: left"><%= @entry.title %></h1>
+
+    <!-- Author -->
+    <p class="lead">
+      by
+      <%= link_to @entry.user.name, @entry.user %>
+    </p>
+
+    <hr>
+
+    <!-- Date/Time -->
+    <% if @entry.updated_at ===  @entry.created_at %>
+      <p>Posted on <%= localize(@entry.created_at, :format => :long) %></p>
+    <% else %>
+      <p>Updated on <%= localize(@entry.updated_at, :format => :long) %></p>
+    <% end %>
+    <hr>
+
+    <!-- Post Content -->
+
+
+    <p><%= @entry.content %></p>
+
+    <hr>
+
+    <!-- Comments Form -->
+
+    <div class="card my-4">
+      <% if logged_in? %>
+        <h5 class="card-header">Leave a Comment:</h5>
+        <div class="card-body">
+          <%= form_for @comment, remote: true do |f| %>
+            <%= render "shared/error_messages", object: f.object %>
+            <%= f.number_field :user_id, value: current_user.id, class: "d-none" %>
+            <%= f.number_field :entry_id, value: @entry.id, class: "d-none" %>
+            <div class="form-group">
+              <%= f.text_area :content, class: "form-control comment_input",
+                  placeholder: "Write something ...", rows: "3", required: true %>
+            </div>
+            <%= f.submit "Submit", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      <% else %>
+        <h5 class="card-header">
+            Please <%= link_to "log in", login_path %> to comment !
+        </h5>
+      <% end %>
+    </div>
+
+    <!-- Single Comment -->
+    <div class="entry_comment">
+      <%= render @entry.comments.order(created_at: :asc) %>
+
+    </div>
+  </div>
+
+  <!-- Sidebar Widgets Column -->
+  <div class="col-md-4">
+
+    <!-- Search Widget -->
+    <div class="card my-4">
+      <h5 class="card-header">Search</h5>
+      <div class="card-body">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories Widget -->
+    <div class="card my-4">
+      <h5 class="card-header">Categories</h5>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#">Web Design</a>
+              </li>
+              <li>
+                <a href="#">HTML</a>
+              </li>
+              <li>
+                <a href="#">Freebies</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#">JavaScript</a>
+              </li>
+              <li>
+                <a href="#">CSS</a>
+              </li>
+              <li>
+                <a href="#">Tutorials</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side Widget -->
+    <div class="card my-4">
+      <h5 class="card-header">Side Widget</h5>
+      <div class="card-body">
+        You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap
+        4 card containers!
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+

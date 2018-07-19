@@ -18,6 +18,15 @@ class EntriesController < ApplicationController
     end
   end
 
+  def show
+    @entry = Entry.find_by id: params[:id]
+    @comment = Comment.new
+
+    return @entry if @entry
+    flash[:danger] = t "c_uc.find_error"
+    redirect_to root_path
+  end
+
   def destroy
     if @entry.destroy
       flash[:success] = t "c_mc.entry_deleted"

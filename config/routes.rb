@@ -12,8 +12,8 @@ Rails.application.routes.draw do
     delete "logout", to: "sessions#destroy"
     get "publish", to: "entries#new"
     post "publish", to: "entries#create"
-    # delete "entries/:id", to: "users#destroy", as: "entry"
-    resources :entries, only: :destroy
+    resources :entries, only: [:destroy, :show]
+    resources :comments, only: [:create, :destroy, :edit, :update]
 
     resources :users do
       member do

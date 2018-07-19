@@ -1,0 +1,10 @@
+<div id="update_comment_<%= @comment.id %>">
+  <%= form_for @comment, remote: true do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+    <div class="form-group">
+      <%= f.text_area :content, class: "form-control comment_input",
+                      placeholder: "Write something ...", rows: "3", required: true %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>

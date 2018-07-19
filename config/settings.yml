@@ -16,3 +16,4 @@ vert_max: 400
 avatar_size: 50
 image_type: "image/jpeg,image/gif,image/png"
 users_per_page: 20
+comment_per_page: 8

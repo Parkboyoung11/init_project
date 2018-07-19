@@ -4,6 +4,10 @@ body {
   font-family: Karla;
 }
 
+.jumbotron {
+  //background-color: #555555;
+}
+
 section {
   overflow: auto;
 }
@@ -258,11 +262,19 @@ aside {
     margin-top: 5em;
     padding-top: 0;
   }
-  .title {
+  .title a{
     display: block;
     margin-left: 60px;
     font-weight: bolder;
     font-size: 20px;
+    color: black;
+  }
+  .title a:visited {
+    color: darkgray;
+  }
+  .title a:hover {
+    color: orangered;
+    text-decoration: none;
   }
   .content {
     display: block;
@@ -272,6 +284,30 @@ aside {
     color: lightgray;
     margin-left: 10px;
     display:inline;
+  }
+}
+
+.comments {
+  .user {
+    font-size: 15px;
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .timestamp {
+    color: lightgray;
+    margin-left: 10px;
+    display:inline;
+  }
+  .edit_del {
+    float: right;
+  }
+  .edit_del a {
+    margin-left: 5px;
+    color: darkgray;
+  }
+  .edit_del a:hover {
+    color: orangered;
+    text-decoration: none;
   }
 }
 
@@ -292,6 +328,7 @@ span.picture {
 .gravatar {
   float: left;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .gravatar_edit {
