@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @microposts = @user.microposts.page(params[:page])
+    @entries = @user.entries.page(params[:page])
                        .per Settings.microposts_per_page
   end
 

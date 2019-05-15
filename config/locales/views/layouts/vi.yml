@@ -12,3 +12,5 @@ vi:
     setting: "Cai dat"
     logout: "Dang xuat"
     signin: "Dang nhap"
+    create_post: "Dang bai"
+    entries: "Bai dang"

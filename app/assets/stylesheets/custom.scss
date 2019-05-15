@@ -1,5 +1,13 @@
 @import 'bootstrap';
 
+body {
+  font-family: Karla;
+}
+
+.jumbotron {
+  //background-color: #555555;
+}
+
 section {
   overflow: auto;
 }
@@ -243,6 +251,66 @@ aside {
   }
 }
 
+.publish_posts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .title a{
+    display: block;
+    margin-left: 60px;
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+  }
+  .title a:visited {
+    color: darkgray;
+  }
+  .title a:hover {
+    color: orangered;
+    text-decoration: none;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+  }
+  .timestamp {
+    color: lightgray;
+    margin-left: 10px;
+    display:inline;
+  }
+}
+
+.comments {
+  .user {
+    font-size: 15px;
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .timestamp {
+    color: lightgray;
+    margin-left: 10px;
+    display:inline;
+  }
+  .edit_del {
+    float: right;
+  }
+  .edit_del a {
+    margin-left: 5px;
+    color: darkgray;
+  }
+  .edit_del a:hover {
+    color: orangered;
+    text-decoration: none;
+  }
+}
+
 aside {
   textarea {
     height: 100px;
@@ -260,6 +328,7 @@ span.picture {
 .gravatar {
   float: left;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .gravatar_edit {
@@ -302,4 +371,50 @@ span.picture {
 
 .users.follow {
   padding: 0;
+}
+
+.furry-avatar {
+  margin-left: 15px;
+  float: right;
+  max-width: 40px;
+}
+
+.furry-drop {
+  padding: 0;
+}
+
+.author-avatar {
+  max-width: 100px;
+}
+
+.author-name {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.author-name a:hover {
+  text-decoration: none;
+}
+
+.author-info {
+  padding-right: 0;
+}
+
+.welcome-you {
+  font-weight: bolder;
+  font-size: 25px;
+  color: orangered;
+}
+
+.login-to-follow {
+  margin-top: 10px;
+  font-size: 20px
+}
+
+.login-to-follow a {
+  color: black;
+}
+
+.login-to-follow a:hover {
+  text-decoration: none;
 }

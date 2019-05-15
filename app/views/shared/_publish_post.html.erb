@@ -1,0 +1,6 @@
+<% if @publish_posts.any? %>
+  <ol class="publish_posts">
+    <%= render @publish_posts %>
+  </ol>
+  <%= paginate @publish_posts %>
+<% end %>

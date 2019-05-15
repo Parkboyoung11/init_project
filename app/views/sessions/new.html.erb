@@ -14,7 +14,7 @@
                 class: "float-right" %>
   </div>
   <%= f.submit (t "v_ss_n.signin"), class: "btn btn-lg btn-primary btn-block" %>
-  <div class="text-right">
-    <p><%= link_to (t "v_ss_n.signupnow"), signup_path %></p>
-  </div>
 <% end %>
+<div class="text-center">
+  <p>New to blog? <%= link_to (t "v_ss_n.signup"), signup_path %></p>
+</div>

@@ -10,6 +10,11 @@ Rails.application.routes.draw do
     get "login", to: "sessions#new"
     post "login", to: "sessions#create"
     delete "logout", to: "sessions#destroy"
+    get "publish", to: "entries#new"
+    post "publish", to: "entries#create"
+    resources :entries, only: [:destroy, :show]
+    resources :comments, only: [:create, :destroy, :edit, :update]
+
     resources :users do
       member do
         get :following, :followers
@@ -19,5 +24,8 @@ Rails.application.routes.draw do
     resources :password_resets, only: [:new, :create, :edit, :update]
     resources :microposts, only: [:create, :destroy]
     resources :relationships, only: [:create, :destroy]
+
+    get "change_avatar", to: "change_avatars#new"
+    post "change_avatar", to: "change_avatars#change"
   end
 end

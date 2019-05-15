@@ -1,0 +1,21 @@
+<div class="media mb-4" id="comment_<%= comment.id %>">
+  <%= link_to gravatar_for(comment.user, size: Settings.avatar_size),
+              comment.user, class: "d-flex mr-3 rounded-circle" %>
+  <div class="media-body comments">
+    <h5 class="mt-0 user">
+      <%= link_to comment.user.name, comment.user %>
+      <div class="timestamp"><%= time_ago_in_words(comment.updated_at) %> ago</div>
+      <div class="edit_del">
+        <% if comment.user.current_user? current_user %>
+          <%= link_to "Edit", edit_comment_path(comment), remote: true %>
+          <%= link_to "Delete", comment, method: :delete, remote: true,
+                      data: {confirm: (t "v_mi_mi.u_sure")} %>
+        <% end %>
+      </div>
+    </h5>
+    <div id="comment_content_<%= comment.id %>">
+      <%= comment.content %>
+    </div>
+  </div>
+</div>
+

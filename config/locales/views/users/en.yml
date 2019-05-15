@@ -8,6 +8,7 @@ en:
     your_email_p: "Enter your email"
     pass_p: "Enter password"
     pass_conf_p: "Confirm password"
+    signup: "Sign Up"
 
   v_u_user:
     delete: "Delete"

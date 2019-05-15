@@ -1,12 +1,8 @@
 <% provide :button_text, (t "v_u_edit.save_change") %>
+<h1></h1>
 <h1><%= t "v_u_edit.update_profile" %></h1>
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3 furry-center">
     <%= render "form" %>
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://sonvuhong.com" target="_blank"><%= t "change" %></a>
-    </div>
   </div>
 </div>

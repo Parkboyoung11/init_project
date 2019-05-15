@@ -1,5 +1,8 @@
 <% provide :button_text, (t "v_u_new.register") %>
+<h1></h1>
+<h1 class="h3 mb-3 font-weight-normal"><%= t "v_u_form.signup" %></h1>
 <%= render "form" %>
-<div class="text-right form-signin">
+<div class="text-center form-signin">
+  Have account?
   <%= link_to (t "v_u_new.signin"), login_path %>
 </div>

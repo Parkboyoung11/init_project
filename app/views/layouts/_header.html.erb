@@ -1,20 +1,66 @@
-<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+<header class="navbar navbar-fixed-top navbar-dark bg-dark">
+  <div class="container">
     <%= link_to (t "v_l_h.my_blog"), home_path, id: "logo", class: "navbar-brand" %>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <%= link_to (t "v_l_h.home"), home_path, class: "nav-item nav-link active" %>
-        <%= link_to (t "v_l_h.help"), help_path, class: "nav-item nav-link" %>
+    <nav>
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <% if request.fullpath.include? "home" %>
+            <%= link_to (t "v_l_h.home"), home_path, class: "nav-item nav-link active" %>
+          <% else %>
+            <%= link_to (t "v_l_h.home"), home_path, class: "nav-item nav-link #{request.fullpath}" %>
+          <% end %>
+        </li>
         <% if logged_in? %>
-          <%= link_to "#{current_user.name}", users_path,
-                      class: "nav-item nav-link" %>
-          <%= link_to (t "v_l_h.profile"), current_user, class: "nav-item nav-link" %>
-          <%= link_to (t "v_l_h.setting"), edit_user_path(current_user),
-                      class: "nav-item nav-link" %>
-          <%= link_to (t "v_l_h.logout"), logout_path, method: :delete,
-                      class: "nav-item nav-link" %>
+          <li class="nav-item">
+            <% if request.fullpath.include? "publish" %>
+              <%= link_to (t "v_l_h.create_post"), publish_path, class: "nav-item nav-link fa fa-pencil active" %>
+            <% else %>
+              <%= link_to (t "v_l_h.create_post"), publish_path, class: "nav-item nav-link fa fa-pencil" %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if request.fullpath.end_with? "/users" %>
+              <%= link_to "Users", users_path, class: "nav-item nav-link active" %>
+            <% else %>
+              <%= link_to "Users", users_path, class: "nav-item nav-link" %>
+            <% end %>
+          </li>
+          <li class="furry-avatar">
+            <%= gravatar_for(current_user, size: 40) %>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle furry-drop" data-toggle="dropdown">
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <%= current_user.name %>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="dropdown-item">
+                <%= link_to (t "v_l_h.entries"), current_user%>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to (t "v_l_h.profile"), edit_user_path(current_user) %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to "Change Avatar", change_avatar_path %>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="dropdown-item">
+                <%= link_to (t "v_l_h.logout"), logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
         <% else %>
-          <%= link_to (t "v_l_h.signin"), login_path, class: "nav-item nav-link" %>
+          <li class="nav-item">
+            <% if request.fullpath.end_with? "/login" %>
+              <%= link_to (t "v_l_h.signin"), login_path, class: "nav-item nav-link active" %>
+            <% else %>
+              <%= link_to (t "v_l_h.signin"), login_path, class: "nav-item nav-link" %>
+            <% end %>
+          </li>
         <% end %>
-      </div>
-    </div>
+      </ul>
+    </nav>
+  </div>
 </header>

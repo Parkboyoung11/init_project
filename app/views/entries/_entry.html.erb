@@ -1,0 +1,22 @@
+<li id="entry-<%= entry.id %>">
+  <%= link_to gravatar_for(entry.user,
+                           size: Settings.avatar_size), entry.user %>
+  <span class="user">
+    <%= link_to entry.user.name, entry.user %>
+    <div class="timestamp">
+      <% if (Time.now - entry.created_at.to_time) > 1.day %>
+        <%= localize(entry.created_at, :format => :long) %>
+      <% else %>
+        <%= time_ago_in_words(entry.created_at) %> ago
+      <% end %>
+      <% if entry.user.current_user? current_user %>
+        <%= link_to (t "v_mi_mi.delete"), entry, method: :delete,
+                    data: {confirm: (t "v_mi_mi.u_sure")} %>
+      <% end %>
+    </div>
+  </span>
+  <span class="title"><%= link_to entry.title, entry %></span>
+  <span class="content">
+    <%= truncate(entry.content, length: 200, omission: '...') %>
+  </span>
+</li>
